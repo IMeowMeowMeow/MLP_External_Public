@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e7fa1e5c-4be8-4bf0-b08e-399117a14177}</ProjectGuid>
+    <RootNamespace>MLPExternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\ыф\source\repos\MLP_External\src\External;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\ыф\source\repos\MLP_External\src\External;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>$(SolutionDir)build\intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>D:\repos\MLP_External\src\External;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\debug\</OutDir>
+    <IntDir>$(SolutionDir)build\debug\intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)src\External;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)build\release\</OutDir>
+    <IntDir>$(SolutionDir)build\release\intermediates\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>D:\repos\MLP_External\src\External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;libcurl_a.lib;Normaliz.lib;Ws2_32.lib;Wldap32.lib;Crypt32.lib;advapi32.lib;User32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\repos\MLP_External\src\External\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <AdditionalLibraryDirectories>$(ProjectDir)src\External\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\External\fonts\fonts.cpp" />
+    <ClCompile Include="src\External\imgui\imgui.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\External\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Menu\Gui\gui.cpp" />
+    <ClCompile Include="src\Menu\menu.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Button\TabButton.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Button\ToggleButon.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Checkbox\Checkbox.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Slider\SliderDouble.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Slider\SliderFloat.cpp" />
+    <ClCompile Include="src\Menu\Widgets\Slider\SliderInt.cpp" />
+    <ClCompile Include="src\MLP\Headers\key_mapping.h" />
+    <ClCompile Include="src\MLP\Modules\Aimbot\aimbot.cpp" />
+    <ClCompile Include="src\MLP\Modules\ESP\playersESP.cpp" />
+    <ClCompile Include="src\MLP\Modules\ESP\itemsESP.cpp" />
+    <ClCompile Include="src\MLP\Modules\Flyhack\flyhack.cpp" />
+    <ClCompile Include="src\MLP\Modules\FreeCam\freecam.cpp" />
+    <ClCompile Include="src\MLP\Modules\Misc\misc.cpp" />
+    <ClCompile Include="src\MLP\Modules\modules.cpp" />
+    <ClCompile Include="src\MLP\Modules\Test\test.cpp" />
+    <ClCompile Include="src\MLP\Headers\KeyManager.h" />
+    <ClCompile Include="src\MLP\Settings\Hotkeys\hotkey.cpp" />
+    <ClCompile Include="src\MLP\Settings\settings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\External\curllib\include\brotli\decode.h" />
+    <ClInclude Include="src\External\curllib\include\brotli\encode.h" />
+    <ClInclude Include="src\External\curllib\include\brotli\port.h" />
+    <ClInclude Include="src\External\curllib\include\brotli\shared_dictionary.h" />
+    <ClInclude Include="src\External\curllib\include\brotli\types.h" />
+    <ClInclude Include="src\External\curllib\include\curl\curl.h" />
+    <ClInclude Include="src\External\curllib\include\curl\curlver.h" />
+    <ClInclude Include="src\External\curllib\include\curl\easy.h" />
+    <ClInclude Include="src\External\curllib\include\curl\header.h" />
+    <ClInclude Include="src\External\curllib\include\curl\mprintf.h" />
+    <ClInclude Include="src\External\curllib\include\curl\multi.h" />
+    <ClInclude Include="src\External\curllib\include\curl\options.h" />
+    <ClInclude Include="src\External\curllib\include\curl\stdcheaders.h" />
+    <ClInclude Include="src\External\curllib\include\curl\system.h" />
+    <ClInclude Include="src\External\curllib\include\curl\typecheck-gcc.h" />
+    <ClInclude Include="src\External\curllib\include\curl\urlapi.h" />
+    <ClInclude Include="src\External\curllib\include\curl\websockets.h" />
+    <ClInclude Include="src\External\curllib\include\libpsl.h" />
+    <ClInclude Include="src\External\curllib\include\libssh2.h" />
+    <ClInclude Include="src\External\curllib\include\libssh2_publickey.h" />
+    <ClInclude Include="src\External\curllib\include\libssh2_sftp.h" />
+    <ClInclude Include="src\External\curllib\include\nghttp2\nghttp2.h" />
+    <ClInclude Include="src\External\curllib\include\nghttp2\nghttp2ver.h" />
+    <ClInclude Include="src\External\curllib\include\nghttp3\nghttp3.h" />
+    <ClInclude Include="src\External\curllib\include\nghttp3\version.h" />
+    <ClInclude Include="src\External\curllib\include\ngtcp2\ngtcp2.h" />
+    <ClInclude Include="src\External\curllib\include\ngtcp2\ngtcp2_crypto.h" />
+    <ClInclude Include="src\External\curllib\include\ngtcp2\ngtcp2_crypto_quictls.h" />
+    <ClInclude Include="src\External\curllib\include\ngtcp2\version.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\aes.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\asn1.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\asn1t.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\bio.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\blowfish.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\bn.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\buffer.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\camellia.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\cast.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\chacha.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\cmac.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\cms.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\comp.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\conf.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\crypto.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ct.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\curve25519.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\des.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\dh.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\dsa.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\dtls1.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ec.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ecdh.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ecdsa.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\engine.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\err.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\evp.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\hkdf.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\hmac.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\idea.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\kdf.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\lhash.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\md4.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\md5.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\modes.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\objects.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\obj_mac.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ocsp.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\opensslconf.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\opensslfeatures.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\opensslv.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ossl_typ.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\pem.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\pkcs12.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\pkcs7.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\poly1305.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\posix_time.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\rand.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\rc2.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\rc4.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ripemd.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\rsa.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\safestack.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\sha.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\sm3.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\sm4.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\srtp.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ssl.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ssl3.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\stack.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\tls1.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ts.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\txt_db.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\ui.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\x509.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\x509v3.h" />
+    <ClInclude Include="src\External\curllib\include\openssl\x509_vfy.h" />
+    <ClInclude Include="src\External\curllib\include\zconf.h" />
+    <ClInclude Include="src\External\curllib\include\zdict.h" />
+    <ClInclude Include="src\External\curllib\include\zlib.h" />
+    <ClInclude Include="src\External\curllib\include\zstd.h" />
+    <ClInclude Include="src\External\curllib\include\zstd_errors.h" />
+    <ClInclude Include="src\External\fonts\fonts.h" />
+    <ClInclude Include="src\External\fonts\Icons\fa-brands-400.h" />
+    <ClInclude Include="src\External\fonts\Icons\fa-regular-400.h" />
+    <ClInclude Include="src\External\fonts\Icons\fa-solid-900.h" />
+    <ClInclude Include="src\External\fonts\Icons\IconsFontAwesome6.h" />
+    <ClInclude Include="src\External\fonts\Icons\IconsFontAwesome6Brands.h" />
+    <ClInclude Include="src\External\fonts\Inter\Inter_18pt-Light.h" />
+    <ClInclude Include="src\External\fonts\Inter\Inter_18pt-Medium.h" />
+    <ClInclude Include="src\External\fonts\Inter\Inter_18pt-Regular.h" />
+    <ClInclude Include="src\External\fonts\Inter\Inter_18pt-SemiBold.h" />
+    <ClInclude Include="src\External\fonts\Roboto\Roboto-Medium.h" />
+    <ClInclude Include="src\External\fonts\Roboto\Roboto-Regular.h" />
+    <ClInclude Include="src\External\imgui\imconfig.h" />
+    <ClInclude Include="src\External\imgui\imgui.h" />
+    <ClInclude Include="src\External\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\External\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\External\imgui\imgui_internal.h" />
+    <ClInclude Include="src\External\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\External\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\External\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\External\rapidjson\allocators.h" />
+    <ClInclude Include="src\External\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="src\External\rapidjson\document.h" />
+    <ClInclude Include="src\External\rapidjson\encodedstream.h" />
+    <ClInclude Include="src\External\rapidjson\encodings.h" />
+    <ClInclude Include="src\External\rapidjson\error\en.h" />
+    <ClInclude Include="src\External\rapidjson\error\error.h" />
+    <ClInclude Include="src\External\rapidjson\filereadstream.h" />
+    <ClInclude Include="src\External\rapidjson\filewritestream.h" />
+    <ClInclude Include="src\External\rapidjson\fwd.h" />
+    <ClInclude Include="src\External\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="src\External\rapidjson\internal\clzll.h" />
+    <ClInclude Include="src\External\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="src\External\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="src\External\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="src\External\rapidjson\internal\itoa.h" />
+    <ClInclude Include="src\External\rapidjson\internal\meta.h" />
+    <ClInclude Include="src\External\rapidjson\internal\pow10.h" />
+    <ClInclude Include="src\External\rapidjson\internal\regex.h" />
+    <ClInclude Include="src\External\rapidjson\internal\stack.h" />
+    <ClInclude Include="src\External\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="src\External\rapidjson\internal\strtod.h" />
+    <ClInclude Include="src\External\rapidjson\internal\swap.h" />
+    <ClInclude Include="src\External\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="src\External\rapidjson\memorybuffer.h" />
+    <ClInclude Include="src\External\rapidjson\memorystream.h" />
+    <ClInclude Include="src\External\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="src\External\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="src\External\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="src\External\rapidjson\pointer.h" />
+    <ClInclude Include="src\External\rapidjson\prettywriter.h" />
+    <ClInclude Include="src\External\rapidjson\rapidjson.h" />
+    <ClInclude Include="src\External\rapidjson\reader.h" />
+    <ClInclude Include="src\External\rapidjson\schema.h" />
+    <ClInclude Include="src\External\rapidjson\stream.h" />
+    <ClInclude Include="src\External\rapidjson\stringbuffer.h" />
+    <ClInclude Include="src\External\rapidjson\uri.h" />
+    <ClInclude Include="src\External\rapidjson\writer.h" />
+    <ClInclude Include="src\Menu\Gui\gui.h" />
+    <ClInclude Include="src\Menu\Gui\gui_interface.h" />
+    <ClInclude Include="src\Menu\menu.h" />
+    <ClInclude Include="src\Menu\Widgets\widgets.h" />
+    <ClInclude Include="src\MLP\Headers\anim.hpp" />
+    <ClInclude Include="src\MLP\Headers\bots.h" />
+    <ClInclude Include="src\MLP\Headers\colors.hpp" />
+    <ClInclude Include="src\MLP\Headers\common.hpp" />
+    <ClInclude Include="src\MLP\Headers\enums.h" />
+    <ClInclude Include="src\MLP\Headers\fstr_color_link.hpp" />
+    <ClInclude Include="src\MLP\Headers\macros.hpp" />
+    <ClInclude Include="src\MLP\Headers\notifications.hpp" />
+    <ClInclude Include="src\MLP\Headers\structures.h" />
+    <ClInclude Include="src\MLP\Headers\structures.hpp" />
+    <ClInclude Include="src\MLP\Headers\ufield.hpp" />
+    <ClInclude Include="src\MLP\Headers\uobject.hpp" />
+    <ClInclude Include="src\MLP\Headers\widget.hpp" />
+    <ClInclude Include="src\MLP\Memory\memory.hpp" />
+    <ClInclude Include="src\MLP\Modules\modules.h" />
+    <ClInclude Include="src\MLP\Settings\Hotkeys\hotkey.h" />
+    <ClInclude Include="src\MLP\Settings\settings.h" />
+    <ClInclude Include="src\MLP\Headers\game_function.hpp" />
+    <ClInclude Include="src\MLP\Headers\game_math.hpp" />
+    <ClInclude Include="src\MLP\Headers\game_structures.hpp" />
+    <ClInclude Include="src\MLP\Headers\globals.h" />
+    <ClInclude Include="src\MLP\Headers\ItemProperties.h" />
+    <ClInclude Include="src\MLP\Headers\util.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
