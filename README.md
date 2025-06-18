@@ -1,4 +1,4 @@
-BUILD IN RELEASE MODE
+BUILD IN RELEASE MODE OR DOWNLOAD FROM [REALESES](https://github.com/IMeowMeowMeow/MLP_External_Public/releases)
 
 SPINEL ADD ME TO THE TABLE https://youtu.be/3Oxf0_Ko2cA
 
